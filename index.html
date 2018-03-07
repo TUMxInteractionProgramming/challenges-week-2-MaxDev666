@@ -1,191 +1,127 @@
-<!DOCTYPE html >
-<!-- #1 #structure #document -->
-<html>
+<!DOCTYPE html>
+<!-- Start with your chatter|app here -->
+<html lang="de">
+
 <head>
-
-    <!-- #1 #structure #title -->
-    <title>chatter|app</title>
-
-    <!-- We need to specify the character encoding, since we use chinese characters -->
     <meta charset="UTF-8">
-
-    <!-- #2 #css #elements -->
+    <title>chatter|app</title> 
     <style>
-
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
+    /* Color Palette 
+        Background: light gray (#e6e6e6)
+        Primary text: black (#000000) on white (#FFFFFF) background
+        Primary color: Blue (#2b2fd5)
+        Primary color text: white (#FFFFFF)
+        Accent color: Green (#4CAF50)
+        Accent color text: black (#000000)*/
+    
+        *{
+            /* set background light-grey, text color black and font-family to Arial*/
+            font-family: Arial, sans-serif;
         }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
+        
+        body{
+            background-color: #e6e6e6;
+            color: #000000;
         }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
+        
+        h1{
+            /* set background color of app-bars to blue and text color white*/
+            background-color: #2b2fd5;
+            color: #FFFFFF;
         }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
+        
+        /* change background color to white*/
+        ul{
+    
+            background-color: #ffffff;
+            list-style-type: none
+        } 
+        
+        p{
+            background-color: #ffffff;
+        }
+        
+        button{
+            /*change backgrond-color of the buttons to green and set it Uppercase */
+            background-color: #4CAF50;
             text-transform: uppercase;
         }
-
-
-        /*styles for channel area*/
-        h2 {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
+        
+        h3{
+            /* change text size of the metadata to medium */
             font-size: medium;
         }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
+        
+        h3 em{
+            /* make the Time to Lie biger and without italic */
             font-size: larger;
             font-style: normal;
         }
-
+        
+        /*Additional exercise*/
+        a{
+            /* Set location links Uppercase */
+            text-transform: uppercase;
+            color:#000000
+        }
     </style>
-
 </head>
 
 <body>
+    <!-- Heading and five IT-related topics -->
+    <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="talking duck, logo of the course" style="height:56px;">Chatter</h1>
+    
+    <ul>
+        <li><img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star without filling">#General IT-Themes</li>
+        <li><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star with filling">#Programming</li>
+        <li><img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star without filling">#Hardware</li>
+        <li><img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star without filling">#Network</li>
+        <li><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star with filling">#Games</li>
+    </ul>
 
-<!-- channel area -->
-<!-- #1 #channels #app-bar -->
-<h1>chatter|app</h1>
+    <!-- three buttons for new topics, the trending Topics and Favorites -->
+    <div style="background-color:#ffffff">
+    <button><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb without filling">New</button>
+    <button><img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="one fire flame">Trending</button>
+    <button><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star with filling">Favorites</button>
+    </div>
+    
+    <!-- Chat about the Programming topic by outlines.text.tubes -->
+    <h1>#Programming<small> by outlined.text.tubes</small></h1>
 
-<!-- #1 #channels #topics -->
-<h2>#Yummy</h2>
-<h2>#SevenContinents</h2>
-<h2>#KillerApp</h2>
-<h2>#FirstPersonOnMars</h2>
-<h2>#Octoberfest</h2>
+    <!-- Chat messages with location, Date and Time, Time to live and "+5min" button -->
+    <div style="width:80%">
+    <h3><a href="https://map.what3words.com/outlined.text.tubes" target="_blank">outlined.text.tubes</a> Wed, February 28th, 20:35 <em>2 min left</em></h3>
+    <p>Hello together, I have a Question and I hope you could help me. Which programming type do you like the most? Is ist Webdesign or Desktop programming or something differnt?</p>
+    <button>+5min</button>
+    </div>
 
-<!-- #1 #channels #buttons -->
-<button>new</button>
-<button>trending</button>
-<button>favorites</button>
-
-
-<!-- chat area -->
-<!-- #1 #chat #name -->
-<h1>#SevenContinents
-    <!-- #1 #chat #location is wrapped in small tag-->
-    <small>by
-        <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-        <strong>cheeses.yard.applies</strong>
-    </small>
-</h1>
-
-<!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<h3>
-    <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>cheeses.yard.applies</strong>
-    Wed, June 20th, 13:37
-    <!-- #1 #chat #ttl lives inside the metadata -->
-    <em>15 min. left</em>
-</h3>
-<!-- #1 #chat #messages depict a short fictional chat-->
-<p>What's the place you folks call home?</p>
-<!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
-
-<!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<h3>
-    <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>truck.cotton.zone</strong>
-    Wed, June 20th, 13:39
-    <!-- #1 #chat #ttl lives inside the metadata -->
-    <em>4 min. left</em>
-</h3>
-<!-- #1 #chat #messages depict a short fictional chat-->
-<p>BRISBANE! Hang loose!</p>
-<!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
-
-<!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<h3>
-    <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>thus.best.dishes</strong>
-    Wed, June 20th, 14:02
-    <!-- #1 #chat #ttl lives inside the metadata -->
-    <em>12 min. left</em>
-</h3>
-<!-- #1 #chat #messages depict a short fictional chat-->
-<p>The big apple.</p>
-<!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
-
-<!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<h3>
-    <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>driveway.helper.magazine</strong>
-    Wed, June 20th, 14:02
-    <!-- #1 #chat #ttl lives inside the metadata -->
-    <em>7 min. left</em>
-</h3>
-<!-- #1 #chat #messages depict a short fictional chat-->
-<p>Eu sou um Carocas.</p>
-<!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
-
-<!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<h3>
-    <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>escapes.pitch.saucepan</strong>
-    Wed, June 20th, 14:07
-    <!-- #1 #chat #ttl lives inside the metadata -->
-    <em>14 min. left</em>
-</h3>
-<!-- #1 #chat #messages depict a short fictional chat-->
-<p>Greetings from the western cape!</p>
-<!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
-
-<!-- #1 #chat #metadata contains location, weekday, day, and time  -->
-<h3>
-    <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>meanings.identity.pays</strong>
-    Wed, June 20th, 04:08
-    <!-- #1 #chat #ttl lives inside the metadata -->
-    <em>15 min. left</em>
-</h3>
-<!-- #1 #chat #messages depict a short fictional chat-->
-<p>北京</p>
-<!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
-
+    <div style="width:80%">
+    <h3><a href="https://map.what3words.com/quiet.strategy.lease" target="_blank">quiet.strategy.lease</a> Wed, February 28th, 20:37 <em>4 min left</em></h3>
+    <p>Hey, my favourite programming type is the Webdesign because it's very diversified</p>
+    <button>+5min</button>
+    </div>
+    
+    <div style="width:80%">
+    <h3><a href="https://map.what3words.com/infects.national.fashion" target="_blank">infects.national.fashion</a> Wed, February 28th, 20:40 <em>7 min left</em></h3>
+    <p>I use the Desktop programming very often and it's so cool!</p>
+    <button>+5min</button>
+    </div>    
+    
+    <div style="width:80%">
+    <h3><a href="https://map.what3words.com/drank.trunk.graced" target="_blank">drank.trunk.graced</a> Wed, February 28th, 20:45 <em>12 min left</em></h3>
+    <p>No, machine learning is the only Truth. All other is bad programming.</p>
+    <button>+5min</button>
+    </div>
+    
+    <div style="width:80%">
+    <h3><a href="https://map.what3words.com/outlined.text.tubes" target="_blank">outlined.text.tubes</a> Wed, February 28th, 20:47 <em>14 min left</em></h3>
+    <p>Wow! so many answers after this short time. Thank you very much! Have a good evening together.</p>
+    <button>+5min</button>
+    </div>
+    
+    <br>
+    
 </body>
+
 </html>
